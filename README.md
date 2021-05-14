@@ -3,7 +3,6 @@ This is the repository for the LinkedIn Learning course `GitOps Foundations`. Th
 
 ![course-name-alt-text][lil-thumbnail-url] 
 
-## Instructions
 This repository contains the source code for the sample application that runs inside of a container image.  During the course setup, you'll need to build the image from source and place it within an artifact repository, which in this case is DockerHub.  In a GitOps workflow, this repository would be used to make changes to the application such as adding new features or bug fixes.  These changes would be built into a packaged software artifact that is further packaged into a container image for operations to pull from the artifact repository.  This segment of the workflow is traditionally well established via continuous integration practices, whereas GitOps is more focused on the delivery and deployment of containers as expressed in the desired state.  
 
 The desired state is most often held in a separate repository, known as a config or environment repository, that holds infrastructure code.  For this course, you'll find an accompanying [config reposity][config-repo] where you'll primarily work throughout the course to complete GitOps workflows. 

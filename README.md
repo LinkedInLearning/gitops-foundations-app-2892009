@@ -1,15 +1,17 @@
-# COURSENAME
-This is the repository for the LinkedIn Learning course `course-name`. The full course is available from [LinkedIn Learning][lil-course-url].
+# GitOps Foundations
+This is the repository for the LinkedIn Learning course `GitOps Foundations`. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![course-name-alt-text][lil-thumbnail-url] 
 
-_See the readme file in the main branch for updated instructions and information._
 ## Instructions
-This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
+This repository contains the source code for the sample application that runs inside of a container image.  During the course setup, you'll need to build the image from source and place it within an artifact repository, which in this case is DockerHub.  In a GitOps workflow, this repository would be used to make changes to the application such as adding new features or bug fixes.  These changes would be built into a packaged software artifact that is further packaged into a container image for operations to pull from the artifact repository.  This segment of the workflow is traditionally well established via continuous integration practices, whereas GitOps is more focused on the delivery and deployment of containers as expressed in the desired state.  
 
-## Branches
-The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
-Some branches will have a beginning and an end state. These are marked with the letters `b` for "beginning" and `e` for "end". The `b` branch contains the code as it is at the beginning of the movie. The `e` branch contains the code as it is at the end of the movie. The `main` branch holds the final state of the code when in the course.
+The desired state is most often held in a separate repository, known as a config or environment repository, that holds infrastructure code.  For this course, you'll find an accompanying [config reposity][config-repo] where you'll primarily work throughout the course to complete GitOps workflows. 
+
+The application was developed with the following technologies, however they are not necessary for the course:
+1. Java
+2. Spring Framework
+3. Maven
 
 ## Installing
 1. To use these exercise files, you must have the following accounts:
@@ -18,7 +20,7 @@ Some branches will have a beginning and an end state. These are marked with the 
 	- **Docker** is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide][docker-install].
 4. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
 5. After cloning the repository, login to Docker with the following command `docker login`.
-6. Once logged into DockerHub execute the `setup.sh` script with the following command `./setup.sh [DockerHub Username]`.
+6. Once logged into DockerHub execute the `create_images.sh` script with the following command `./create_images.sh [DockerHub Username]`.
 
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
@@ -26,4 +28,5 @@ Some branches will have a beginning and an end state. These are marked with the 
 [lil-course-url]: https://www.linkedin.com/learning/
 [lil-thumbnail-url]: http://
 [docker-hub]: https://hub.docker.com/
+[config-repo]: https://github.com/LinkedInLearning/gitops-foundations-env-2892009
 

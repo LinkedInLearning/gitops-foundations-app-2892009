@@ -28,4 +28,5 @@ The application was developed with the following technologies, however they are 
 [lil-thumbnail-url]: http://
 [docker-hub]: https://hub.docker.com/
 [config-repo]: https://github.com/LinkedInLearning/gitops-foundations-env-2892009
+[docker-install]: https://docs.docker.com/engine/install/
 

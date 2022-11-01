@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.linkedin</groupId>
 	<artifactId>gitops-foundations</artifactId>
-	<version>2.0.0.RELEASE</version>
+	<version>3.0.0.RELEASE</version>
 	<name>gitops-demo</name>
 	<description>A Demo Project for LinkedIn Learning</description>
 	<properties>
